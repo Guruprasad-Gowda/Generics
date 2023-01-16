@@ -5,14 +5,20 @@ import org.junit.Test;
 
 public class MaximumTest {
     @Test
-    public void stringMax1() {
-        String actualValue = Maximum.getmaximum("Aa", "Bb", "Cc");
-        Assert.assertEquals("Cc", actualValue);
+    public void intMax() {
+        int assertValue = Maximum.getmaximum(10, 20, 5);
+        Assert.assertEquals(20, assertValue);
     }
 
     @Test
-    public void stringMax2() {
-        String actualValue = Maximum.getmaximum("abc", "ABC", "def");
-        Assert.assertEquals("def", actualValue);
+    public void floatMax() {
+        float assertValue = Maximum.getmaximum(10f, 20f, 5f);
+        Assert.assertEquals(20, assertValue, 0);
+    }
+
+    @Test
+    public void stringMax() {
+        String assertValue = Maximum.getmaximum("abc", "def", "ghi");
+        Assert.assertEquals("ghi", assertValue);
     }
 }
