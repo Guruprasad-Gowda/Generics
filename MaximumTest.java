@@ -12,7 +12,7 @@ public class MaximumTest {
 
     @Test
     public void floatMax() {
-        float actualValue = Maximum.testMaximum(1.5f, 9.1f, 4.4f);
+        float actualValue = Maximum.testMaximum(1.5f, 9.1f, 4.4f, 5.3f);
         Assert.assertEquals(9.1f, actualValue, 0);
     }
 
