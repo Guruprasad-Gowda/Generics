@@ -6,19 +6,25 @@ import org.junit.Test;
 public class MaximumTest {
     @Test
     public void intMax() {
-        int actualValue = Maximum.testMaximum(10, 20, 5);
-        Assert.assertEquals(20, actualValue);
+        int actualValue = Maximum.testMaximum(9, 4, 1);
+        Assert.assertEquals(9, actualValue);
     }
 
     @Test
     public void floatMax() {
-        float actualValue = Maximum.testMaximum(11f, 52f, 36f);
-        Assert.assertEquals(52f, actualValue, 0);
+        float actualValue = Maximum.testMaximum(1.5f, 9.1f, 4.4f);
+        Assert.assertEquals(9.1f, actualValue, 0);
     }
 
     @Test
     public void stringMax() {
-        String actualValue = Maximum.testMaximum("ABC", "def", "xyz");
-        Assert.assertEquals("xyz", actualValue);
+        String actualValue = Maximum.testMaximum("apple", "peach", "banana");
+        Assert.assertEquals("peach", actualValue);
+    }
+
+    @Test
+    public void givenStringValues_WhenGetMaximum_ShouldReturnCorrectValue() {
+        String actualResult = Maximum.testMaximum("Apple", "Peach", "Banana", "Mango", "Strawberry");
+        Assert.assertEquals("Strawberry", actualResult);
     }
 }
